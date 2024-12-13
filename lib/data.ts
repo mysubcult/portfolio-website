@@ -61,47 +61,39 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {const articlesData = [
   {
-    title: "CorpComment",
+    title: "Капитальный ремонт ТНВД",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Я специализируюсь на капитальном ремонте ТНВД для автомобилей марки Peugeot, Citroen, BMW и Mini. Обеспечиваю надежную и качественную работу вашего двигателя.",
+    tags: ["Ремонт ТНВД", "Диагностика", "Гарантия", "Фотоотчет", "Доставка"],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "Диагностика двигателя",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Провожу полную диагностику двигателя, чтобы выявить и устранить все неисправности. Обеспечиваю послеремонтную обратную связь и гарантии.",
+    tags: ["Диагностика", "Ремонт", "Гарантия", "Обслуживание", "Фотоотчет"],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "Замена и ремонт насосов",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Осуществляю замену и ремонт насосов для автомобилей различных марок. Предлагаю возможность продажи готового насоса или обмена на ваш.",
+    tags: ["Ремонт насосов", "Замена", "Обмен", "Гарантия", "Доставка"],
     imageUrl: wordanalyticsImg,
   },
+];
+
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "Капитальный ремонт ТНВД",
+  "Диагностика двигателя",
+  "Замена и ремонт насосов",
+  "Обслуживание автомобилей Peugeot, Citroen, BMW, Mini",
+  "Гарантийное обслуживание",
+  "Фото и видео отчеты",
+  "Доставка по всем регионам",
+  "Сотрудничество с автосервисами",
 ] as const;
