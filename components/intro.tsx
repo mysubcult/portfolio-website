@@ -61,7 +61,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Приветствую!</span> Я <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Владимир</span>. Я специализируюсь на <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">ремонте ТНВД</span> для автомобилей марки <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Приветствую!</span> Меня зовут <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Владимир</span>. Я специализируюсь на <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">ремонте ТНВД</span> для автомобилей марки <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
       </motion.h1>
 
       <motion.div
