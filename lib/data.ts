@@ -48,7 +48,7 @@ export const experiencesData = [
     description:
       "Работал механиком в автосервисе, специализируясь на ремонте ТНВД для автомобилей марки Peugeot, Citroen, BMW и Mini. Повысил квалификацию до уровня мастера.",
     icon: React.createElement(CgWorkAlt),
-    date: "2015 - 2020",
+    date: "2014 - 2020",
   },
   {
     title: "Мастер по ремонту ТНВД",
