@@ -2,6 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { FaTools } from "react-icons/fa"; // Добавьте импорт для FaTools
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -34,7 +35,6 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
-  const biographyData = [
   {
     title: "Окончание технического колледжа",
     location: "Самара, Россия",
@@ -62,7 +62,6 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-  {const articlesData = [
   {
     title: "Капитальный ремонт ТНВД",
     description:
@@ -84,8 +83,6 @@ export const projectsData = [
     tags: ["Ремонт насосов", "Замена", "Обмен", "Гарантия", "Доставка"],
     imageUrl: wordanalyticsImg,
   },
-];
-
 ] as const;
 
 export const skillsData = [
