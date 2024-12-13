@@ -17,7 +17,7 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>Обо мне</SectionHeading>
       <p className="mb-3">
         Приветствую! Я специализируюсь на <span className="font-medium">ремонте ТНВД</span> для автомобилей марки <span className="font-medium">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
       </p>
