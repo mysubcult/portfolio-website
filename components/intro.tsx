@@ -4,9 +4,9 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaVk, FaTelegramPlane } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -32,7 +32,7 @@ export default function Intro() {
           >
             <Image
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Portrait"
+              alt="Vladimir portrait"
               width="192"
               height="192"
               quality="95"
@@ -62,7 +62,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold text-blue-500">Приветствую!</span> Я специализируюсь на <span className="font-bold text-blue-500">ремонте ТНВД</span> для автомобилей марки <span className="font-bold text-blue-500">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Приветствую!</span> Я <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Владимир</span>. Я специализируюсь на <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">ремонте ТНВД</span> для автомобилей марки <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
       </motion.h1>
 
       <motion.div
@@ -96,18 +96,18 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://vk.com"
           target="_blank"
         >
-          <BsLinkedin />
+          <FaVk />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://telegram.org"
           target="_blank"
         >
-          <FaGithubSquare />
+          <FaTelegramPlane />
         </a>
       </motion.div>
     </section>
