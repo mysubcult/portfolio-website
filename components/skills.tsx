@@ -2,27 +2,16 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
+import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-
-// Пример данных для навыков
-const skillsData = [
-  "Ремонт ТНВД",
-  "Диагностика двигателя",
-  "Замена расходных материалов",
-  "Модернизация насосов",
-  "Гарантийное обслуживание",
-  "Фото и видео отчеты",
-  "Сотрудничество с автосервисами",
-  "Доставка по всем регионам"
-];
 
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
     y: 100,
   },
-  animate: (index) => ({
+  animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -40,7 +29,7 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>Мои навыки</SectionHeading>
+      <SectionHeading>My skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
