@@ -5,7 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-type ProjectProps = (typeof projectsData)[number] & { price: string };
+type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
