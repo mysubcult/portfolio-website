@@ -34,29 +34,30 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
+  const biographyData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Окончание технического колледжа",
+    location: "Самара, Россия",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Окончил технический колледж по специальности 'Ремонт и обслуживание автомобилей'. Сразу после окончания начал работать в автосервисе.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2015",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Механик в автосервисе",
+    location: "Тольятти, Россия",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Работал механиком в автосервисе, специализируясь на ремонте ТНВД для автомобилей марки Peugeot, Citroen, BMW и Mini. Повысил квалификацию до уровня мастера.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2015 - 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Мастер по ремонту ТНВД",
+    location: "Тольятти, Россия",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Теперь я мастер по ремонту ТНВД, работающий на себя. Мои услуги включают капитальный ремонт ТНВД, диагностику двигателя, замену и ремонт насосов, а также гарантийное обслуживание. Открыт для сотрудничества с автосервисами.",
+    icon: React.createElement(FaTools),
+    date: "2020 - настоящее время",
   },
 ] as const;
 
