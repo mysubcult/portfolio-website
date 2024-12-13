@@ -18,7 +18,7 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
-        <nav className="flex h-full items-center justify-center">
+        <nav className="flex h-full items-center justify-center px-5">
           <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:flex-nowrap sm:gap-5">
             {links.map((link) => (
               <motion.li
