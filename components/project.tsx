@@ -5,13 +5,14 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number] & { price: string };
 
 export default function Project({
   title,
   description,
   tags,
   imageUrl,
+  price,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,6 +47,9 @@ export default function Project({
               </li>
             ))}
           </ul>
+          <div className="mt-4">
+            <span className="text-3xl font-bold text-red-500">{price}</span>
+          </div>
         </div>
 
         <Image
