@@ -48,7 +48,7 @@ export default function Project({
             ))}
           </ul>
           <div className="mt-4">
-            <span className="text-3xl font-bold text-red-500">{price}</span>
+            <span className="text-3xl font-bold text-red-500">Стоимость: {price}</span>
           </div>
         </div>
 
