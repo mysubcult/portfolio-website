@@ -24,7 +24,7 @@ export default function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
         <nav className="flex h-full items-center justify-between px-5">
-          <div className="text-gray-950 dark:text-gray-200 text-lg font-bold">
+          <div className="sm:hidden text-gray-950 dark:text-gray-200 text-lg font-bold">
             Logo
           </div>
           <div className="sm:hidden">
@@ -34,7 +34,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <ul className={`flex-col sm:flex sm:flex-row sm:items-center sm:justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:gap-5 ${isMenuOpen ? 'flex' : 'hidden'}`}>
+          <ul className={`sm:flex sm:flex-row sm:items-center sm:justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:gap-5 ${isMenuOpen ? 'flex flex-col' : 'hidden'}`}>
             {links.map((link) => (
               <motion.li
                 className="h-3/4 flex items-center justify-center relative"
