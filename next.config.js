@@ -13,7 +13,7 @@ const nextConfig = {
     ],
   },
   experimental: {
-    serverActions: true,
+    serverActions: {}, // Change this to an empty object
   },
 };
 
