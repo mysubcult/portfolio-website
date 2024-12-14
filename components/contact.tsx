@@ -39,15 +39,15 @@ export default function Contact() {
           <a href="https://vk.com/your_vk_page" className="mb-4 flex items-center">
             <FaVk className="mr-2" /> ВКонтакте
           </a>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/your_vk_page" alt="VK QR Code" />
+          <Image src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/your_vk_page" alt="VK QR Code" />
           <a href="https://wa.me/your_whatsapp_number" className="mb-4 flex items-center mt-4">
             <FaWhatsapp className="mr-2" /> WhatsApp
           </a>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/your_whatsapp_number" alt="WhatsApp QR Code" />
+          <Image src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/your_whatsapp_number" alt="WhatsApp QR Code" />
           <a href="https://t.me/your_telegram_username" className="mb-4 flex items-center mt-4">
             <FaTelegram className="mr-2" /> Telegram
           </a>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/your_telegram_username" alt="Telegram QR Code" />
+          <Image src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/your_telegram_username" alt="Telegram QR Code" />
         </div>
       </div>
       <div className="w-full sm:w-1/2 p-4">
