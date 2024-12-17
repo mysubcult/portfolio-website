@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
@@ -12,12 +12,12 @@ export default function Header() {
     useActiveSectionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     const checkMenuVisibility = () => {
-      const nav = document.querySelector("nav");
-      if (nav) {
-        const items = nav.querySelectorAll("li");
+      if (navRef.current) {
+        const items = navRef.current.querySelectorAll("li");
         let isOverflowing = false;
 
         items.forEach((item) => {
@@ -50,7 +50,7 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
-        <nav className="flex justify-between items-center py-4 sm:py-0">
+        <nav ref={navRef} className="flex justify-between items-center py-4 sm:py-0">
           {isMobileMenu ? (
             <div className="flex justify-end w-full">
               <button
