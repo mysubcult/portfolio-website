@@ -17,11 +17,11 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Услуги",
+    name: "Цены",
     hash: "#projects",
   },
   {
-    name: "Навыки",
+    name: "Услуги",
     hash: "#skills",
   },
   {
