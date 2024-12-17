@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
@@ -11,6 +11,31 @@ export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+
+  useEffect(() => {
+    const checkMenuVisibility = () => {
+      const nav = document.querySelector("nav");
+      const items = nav.querySelectorAll("li");
+      let isOverflowing = false;
+
+      items.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        if (rect.right > window.innerWidth) {
+          isOverflowing = true;
+        }
+      });
+
+      setIsMobileMenu(isOverflowing);
+    };
+
+    window.addEventListener("resize", checkMenuVisibility);
+    checkMenuVisibility(); // Initial check
+
+    return () => {
+      window.removeEventListener("resize", checkMenuVisibility);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,66 +49,69 @@ export default function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
         <nav className="flex justify-between items-center py-4 sm:py-0">
-          <div className="sm:hidden flex justify-end w-full">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-500 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
-            >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+          {isMobileMenu ? (
+            <div className="flex justify-end w-full">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-500 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <ul className="hidden sm:flex items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:gap-6">
-            {links.map((link) => (
-              <motion.li
-                className="h-auto flex items-center justify-center relative whitespace-nowrap"
-                key={link.hash}
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-              >
-                <Link
-                  className={clsx(
-                    "flex items-center justify-center px-4 py-4 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                    {
-                      "text-gray-950 dark:text-gray-200":
-                        activeSection === link.name,
-                    }
-                  )}
-                  href={link.hash}
-                  onClick={() => {
-                    setActiveSection(link.name);
-                    setTimeOfLastClick(Date.now());
-                  }}
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  {link.name}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          ) : (
+            <ul className="flex items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:gap-6">
+              {links.map((link) => (
+                <motion.li
+                  className="h-auto flex items-center justify-center relative whitespace-nowrap"
+                  key={link.hash}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                >
+                  <Link
+                    className={clsx(
+                      "flex items-center justify-center px-4 py-4 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                      {
+                        "text-gray-950 dark:text-gray-200":
+                          activeSection === link.name,
+                      }
+                    )}
+                    href={link.hash}
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now());
+                    }}
+                  >
+                    {link.name}
 
-                  {link.name === activeSection && (
-                    <motion.span
-                      className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                      layoutId="activeSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    ></motion.span>
-                  )}
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
+                    {link.name === activeSection && (
+                      <motion.span
+                        className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      ></motion.span>
+                    )}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          )}
         </nav>
       </motion.div>
       {isMenuOpen && (
