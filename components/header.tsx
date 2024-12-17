@@ -20,7 +20,7 @@ export default function Header() {
       ></motion.div>
 
       <nav className="flex fixed top-[0.5rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[2rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-full flex-wrap items-center justify-center gap-y-1 text-lg font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="grid grid-cols-1 sm:grid-cols-auto gap-y-1 text-lg font-medium text-gray-500 sm:gap-5">
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
