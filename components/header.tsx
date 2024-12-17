@@ -31,11 +31,18 @@ export default function Header() {
       }
     };
 
-    window.addEventListener("resize", checkMenuVisibility);
+    const resizeObserver = new ResizeObserver(() => {
+      checkMenuVisibility();
+    });
+
+    if (navRef.current) {
+      resizeObserver.observe(navRef.current);
+    }
+
     checkMenuVisibility(); // Initial check
 
     return () => {
-      window.removeEventListener("resize", checkMenuVisibility);
+      resizeObserver.disconnect();
     };
   }, []);
 
