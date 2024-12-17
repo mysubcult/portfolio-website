@@ -23,14 +23,14 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
-        <nav className="flex justify-between items-center py-2 sm:py-0">
-          <div className="sm:hidden">
+        <nav className="flex justify-between items-center py-4 sm:py-0">
+          <div className="sm:hidden flex justify-end w-full">
             <button
               onClick={toggleMenu}
               className="text-gray-500 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
             >
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <ul className="hidden sm:flex items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:gap-5">
+          <ul className="hidden sm:flex items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:gap-6">
             {links.map((link) => (
               <motion.li
                 className="h-auto flex items-center justify-center relative whitespace-nowrap"
@@ -55,7 +55,7 @@ export default function Header() {
               >
                 <Link
                   className={clsx(
-                    "flex items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                    "flex items-center justify-center px-4 py-4 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                     {
                       "text-gray-950 dark:text-gray-200":
                         activeSection === link.name,
@@ -94,7 +94,7 @@ export default function Header() {
               className="text-gray-500 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
             >
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <ul className="flex flex-col items-center justify-center gap-y-4 text-[0.9rem] font-medium text-gray-500">
+          <ul className="flex flex-col items-center justify-center gap-y-6 text-[1.1rem] font-medium text-gray-500">
             {links.map((link) => (
               <motion.li
                 className="h-auto flex items-center justify-center relative whitespace-nowrap"
@@ -119,7 +119,7 @@ export default function Header() {
               >
                 <Link
                   className={clsx(
-                    "flex items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                    "flex items-center justify-center px-4 py-4 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                     {
                       "text-gray-950 dark:text-gray-200":
                         activeSection === link.name,
