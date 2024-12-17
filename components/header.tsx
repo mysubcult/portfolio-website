@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
@@ -10,6 +10,11 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="z-[999] relative">
@@ -18,11 +23,36 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
-        <nav className="flex overflow-x-auto py-2 sm:py-0">
-          <ul className="flex items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:gap-5">
+        <nav className="flex justify-between items-center py-2 sm:py-0">
+          <div className="sm:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-500 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <ul
+            className={`flex items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:gap-5 ${
+              isMenuOpen ? "flex" : "hidden sm:flex"
+            }`}
+          >
             {links.map((link) => (
               <motion.li
-                className="h-auto flex items-center justify-center relative"
+                className="h-auto flex items-center justify-center relative whitespace-nowrap"
                 key={link.hash}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -39,6 +69,7 @@ export default function Header() {
                   onClick={() => {
                     setActiveSection(link.name);
                     setTimeOfLastClick(Date.now());
+                    setIsMenuOpen(false); // Close the menu after clicking a link
                   }}
                 >
                   {link.name}
