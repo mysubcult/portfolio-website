@@ -16,17 +16,19 @@ export default function Header() {
   useEffect(() => {
     const checkMenuVisibility = () => {
       const nav = document.querySelector("nav");
-      const items = nav.querySelectorAll("li");
-      let isOverflowing = false;
+      if (nav) {
+        const items = nav.querySelectorAll("li");
+        let isOverflowing = false;
 
-      items.forEach((item) => {
-        const rect = item.getBoundingClientRect();
-        if (rect.right > window.innerWidth) {
-          isOverflowing = true;
-        }
-      });
+        items.forEach((item) => {
+          const rect = item.getBoundingClientRect();
+          if (rect.right > window.innerWidth) {
+            isOverflowing = true;
+          }
+        });
 
-      setIsMobileMenu(isOverflowing);
+        setIsMobileMenu(isOverflowing);
+      }
     };
 
     window.addEventListener("resize", checkMenuVisibility);
