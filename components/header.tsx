@@ -12,7 +12,7 @@ export default function Header() {
     useActiveSectionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenu, setIsMobileMenu] = useState(false);
-  const navRef = useRef(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const checkMenuVisibility = () => {
