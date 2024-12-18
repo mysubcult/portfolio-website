@@ -36,34 +36,55 @@ export default function Contact() {
         <p className="text-gray-700 dark:text-white/80">
           Свяжитесь с нами через социальные сети:
         </p>
-        <div className="flex flex-col items-center sm:items-start mt-4">
-          <a href="https://vk.com/your_vk_page" className="mb-4 flex items-center">
-            <FaVk className="mr-2" /> ВКонтакте
-          </a>
-          <Image
-            src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/your_vk_page"
-            alt="VK QR Code"
-            width={128}
-            height={128}
-          />
-          <a href="https://wa.me/your_whatsapp_number" className="mb-4 flex items-center mt-4">
-            <FaWhatsapp className="mr-2" /> WhatsApp
-          </a>
-          <Image
-            src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/your_whatsapp_number"
-            alt="WhatsApp QR Code"
-            width={128}
-            height={128}
-          />
-          <a href="https://t.me/your_telegram_username" className="mb-4 flex items-center mt-4">
-            <FaTelegram className="mr-2" /> Telegram
-          </a>
-          <Image
-            src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/your_telegram_username"
-            alt="Telegram QR Code"
-            width={128}
-            height={128}
-          />
+        <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex flex-col items-center"
+          >
+            <a href="https://vk.com/your_vk_page" className="mb-2 flex items-center">
+              <FaVk className="mr-2 text-blue-500" /> ВКонтакте
+            </a>
+            <Image
+              src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/your_vk_page"
+              alt="VK QR Code"
+              width={128}
+              height={128}
+              className="rounded-lg shadow-lg"
+            />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex flex-col items-center"
+          >
+            <a href="https://wa.me/your_whatsapp_number" className="mb-2 flex items-center mt-4">
+              <FaWhatsapp className="mr-2 text-green-500" /> WhatsApp
+            </a>
+            <Image
+              src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/your_whatsapp_number"
+              alt="WhatsApp QR Code"
+              width={128}
+              height={128}
+              className="rounded-lg shadow-lg"
+            />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex flex-col items-center"
+          >
+            <a href="https://t.me/your_telegram_username" className="mb-2 flex items-center mt-4">
+              <FaTelegram className="mr-2 text-blue-400" /> Telegram
+            </a>
+            <Image
+              src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/your_telegram_username"
+              alt="Telegram QR Code"
+              width={128}
+              height={128}
+              className="rounded-lg shadow-lg"
+            />
+          </motion.div>
         </div>
       </div>
       <div className="w-full sm:w-1/2 p-4">
