@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
@@ -10,6 +10,11 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="z-[999] relative">
@@ -20,7 +25,28 @@ export default function Header() {
       ></motion.div>
 
       <nav className="flex fixed top-[0.2rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[1.8rem] sm:h-[initial] sm:py-0">
-        <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-6">
+        <div className="sm:hidden">
+          <button
+            className="text-gray-500 dark:text-gray-300 focus:outline-none"
+            onClick={toggleMenu}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul className="hidden sm:flex flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-6">
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative w-auto sm:w-auto"
@@ -60,6 +86,72 @@ export default function Header() {
           ))}
         </ul>
       </nav>
+
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white dark:bg-gray-950 z-50 sm:hidden">
+          <div className="flex justify-end p-4">
+            <button
+              className="text-gray-500 dark:text-gray-300 focus:outline-none"
+              onClick={toggleMenu}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <ul className="flex flex-col items-center justify-center gap-y-4 text-[1.1rem] font-medium text-gray-500">
+            {links.map((link) => (
+              <motion.li
+                className="w-full text-center"
+                key={link.hash}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+              >
+                <Link
+                  className={clsx(
+                    "block px-4 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                    {
+                      "text-gray-950 dark:text-gray-200":
+                        activeSection === link.name,
+                    }
+                  )}
+                  href={link.hash}
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                    toggleMenu();
+                  }}
+                >
+                  {link.name}
+
+                  {link.name === activeSection && (
+                    <motion.span
+                      className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    ></motion.span>
+                  )}
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }
