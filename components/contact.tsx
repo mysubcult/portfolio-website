@@ -40,7 +40,7 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center mb-4 sm:mb-0"
           >
             <a href="https://vk.com/your_vk_page" className="mb-2 flex items-center">
               <FaVk className="mr-2 text-blue-500" /> ВКонтакте
@@ -56,9 +56,9 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center mb-4 sm:mb-0"
           >
-            <a href="https://wa.me/your_whatsapp_number" className="mb-2 flex items-center mt-4">
+            <a href="https://wa.me/your_whatsapp_number" className="mb-2 flex items-center">
               <FaWhatsapp className="mr-2 text-green-500" /> WhatsApp
             </a>
             <Image
@@ -72,9 +72,9 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center mb-4 sm:mb-0"
           >
-            <a href="https://t.me/your_telegram_username" className="mb-2 flex items-center mt-4">
+            <a href="https://t.me/your_telegram_username" className="mb-2 flex items-center">
               <FaTelegram className="mr-2 text-blue-400" /> Telegram
             </a>
             <Image
