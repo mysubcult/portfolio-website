@@ -65,61 +65,59 @@ export default function Intro() {
       </motion.h1>
 
       <motion.div
-        className="grid grid-cols-1 gap-2 px-4 text-lg font-medium sm:grid-cols-2"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
+        transition={{
+          delay: 0.1,
+        }}
       >
-        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-          <Link
-            href="#contact"
-            className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition w-full sm:w-auto"
-            onClick={() => {
-              setActiveSection("Обратная связь");
-              setTimeOfLastClick(Date.now());
-            }}
-          >
-            Связаться со мной{" "}
-            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-          </Link>
+        <Link
+          href="#contact"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Обратная связь");
+            setTimeOfLastClick(Date.now());
+          }}
+        >
+          Связаться со мной{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
 
-          <Link
-            href="#projects"
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 w-full sm:w-auto"
-            onClick={() => {
-              setActiveSection("Услуги");
-              setTimeOfLastClick(Date.now());
-            }}
-          >
-            Услуги{" "}
-          </Link>
-        </div>
+        <Link
+          href="#projects"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          onClick={() => {
+            setActiveSection("Услуги");
+            setTimeOfLastClick(Date.now());
+          }}
+        >
+          Услуги{" "}
+        </Link>
 
-        <div className="flex flex-row gap-2 w-full sm:w-auto">
-          <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://vk.com"
-            target="_blank"
-          >
-            <FaVk />
-          </a>
+        <a
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://vk.com"
+          target="_blank"
+        >
+          <FaVk />
+        </a>
 
-          <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://telegram.org"
-            target="_blank"
-          >
-            <FaTelegramPlane />
-          </a>
+        <a
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://telegram.org"
+          target="_blank"
+        >
+          <FaTelegramPlane />
+        </a>
 
-          <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://whatsapp.com"
-            target="_blank"
-          >
-            <FaWhatsapp />
-          </a>
-        </div>
+        <a
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://whatsapp.com"
+          target="_blank"
+        >
+          <FaWhatsapp />
+        </a>
       </motion.div>
     </section>
   );
