@@ -17,7 +17,7 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>🔧 Обо мне</SectionHeading>
+      <SectionHeading>👋 Обо мне</SectionHeading>
       <p className="mb-3">
         Приветствую! Я специализируюсь на <span className="font-medium text-blue-500"><strong>ремонте ТНВД</strong></span> для автомобилей марки <span className="font-medium text-blue-500"><strong>Peugeot, Citroen, BMW и Mini</strong></span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя. Если ваш двигатель <span className="italic text-red-500"><strong>троит, глохнет, теряет мощность и динамику разгона</strong></span>, или выдает ошибки <span className="font-medium text-blue-500"><strong>Check Engine</strong></span> (например, <span className="font-medium text-blue-500"><strong>P0087, P0088, P1336, P2880</strong></span> и другие), то, к сожалению, ваш ТНВД выходит из строя.
       </p>
