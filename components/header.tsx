@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
@@ -10,6 +10,11 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header className="z-[999] relative">
@@ -20,7 +25,27 @@ export default function Header() {
       ></motion.div>
 
       <nav className="flex fixed top-[0.2rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[1.8rem] sm:h-[initial] sm:py-0">
-        <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-6">
+        <button
+          className="sm:hidden text-gray-500 focus:outline-none"
+          onClick={toggleMobileMenu}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+        <ul
+          className={`flex flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-6 ${
+            isMobileMenuOpen ? "block" : "hidden"
+          } sm:flex`}
+        >
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative w-auto sm:w-auto"
@@ -40,6 +65,7 @@ export default function Header() {
                 onClick={() => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
+                  setIsMobileMenuOpen(false); // Close the mobile menu after clicking a link
                 }}
               >
                 {link.name}
