@@ -40,7 +40,7 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center mb-4 sm:mb-0"
+            className="flex flex-col items-center"
           >
             <a href="https://vk.com/your_vk_page" className="mb-2 flex items-center">
               <FaVk className="mr-2 text-blue-500" /> ВКонтакте
@@ -51,14 +51,15 @@ export default function Contact() {
               width={128}
               height={128}
               className="rounded-lg shadow-lg"
+              style={{ width: '128px', height: '128px' }}
             />
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center mb-4 sm:mb-0"
+            className="flex flex-col items-center"
           >
-            <a href="https://wa.me/your_whatsapp_number" className="mb-2 flex items-center">
+            <a href="https://wa.me/your_whatsapp_number" className="mb-2 flex items-center mt-4">
               <FaWhatsapp className="mr-2 text-green-500" /> WhatsApp
             </a>
             <Image
@@ -67,14 +68,15 @@ export default function Contact() {
               width={128}
               height={128}
               className="rounded-lg shadow-lg"
+              style={{ width: '128px', height: '128px' }}
             />
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center mb-4 sm:mb-0"
+            className="flex flex-col items-center"
           >
-            <a href="https://t.me/your_telegram_username" className="mb-2 flex items-center">
+            <a href="https://t.me/your_telegram_username" className="mb-2 flex items-center mt-4">
               <FaTelegram className="mr-2 text-blue-400" /> Telegram
             </a>
             <Image
@@ -83,6 +85,7 @@ export default function Contact() {
               width={128}
               height={128}
               className="rounded-lg shadow-lg"
+              style={{ width: '128px', height: '128px' }}
             />
           </motion.div>
         </div>
