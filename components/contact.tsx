@@ -65,7 +65,14 @@ export default function Contact() {
   );
 }
 
-const SocialLink = ({ href, icon, platform, qrCode }) => (
+interface SocialLinkProps {
+  href: string;
+  icon: React.ReactNode;
+  platform: string;
+  qrCode: string;
+}
+
+const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, platform, qrCode }) => (
   <motion.div
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
