@@ -65,12 +65,10 @@ export default function Intro() {
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="grid grid-cols-1 gap-2 px-4 text-lg font-medium sm:grid-cols-2"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
+        transition={{ delay: 0.1 }}
       >
         <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
           <Link
