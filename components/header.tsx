@@ -30,7 +30,7 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 whitespace-nowrap flex-grow",
                   {
                     "text-gray-950 dark:text-gray-200":
                       activeSection === link.name,
@@ -41,7 +41,6 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
-                style={{ whiteSpace: 'nowrap', flexGrow: 1 }} // Добавленные стили
               >
                 {link.name}
 
