@@ -42,7 +42,7 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
             className="flex flex-col items-center"
           >
-            <a href="https://vk.com/your_vk_page" className="mb-2 flex items-center">
+            <a href="https://vk.com/your_vk_page" className="mb-2 flex items-center mt-4">
               <FaVk className="mr-2 text-blue-500" /> ВКонтакте
             </a>
             <Image
