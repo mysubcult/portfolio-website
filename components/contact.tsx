@@ -32,7 +32,7 @@ export default function Contact() {
       }}
     >
       <div className="w-full sm:w-1/2 p-4">
-        <SectionHeading>Контакты</SectionHeading>
+        <SectionHeading>📞 Контакты</SectionHeading>
         <p className="text-gray-700 dark:text-white/80">
           Свяжитесь с нами через социальные сети:
         </p>
@@ -88,7 +88,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="w-full sm:w-1/2 p-4">
-        <SectionHeading>Обратная связь</SectionHeading>
+        <SectionHeading>📨 Обратная связь</SectionHeading>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
           Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
           <a className="underline" href="mailto:example@gmail.com">
