@@ -87,16 +87,16 @@ export default function Contact() {
           </motion.div>
         </div>
         <div className="mt-8">
-          <h3 className="text-lg font-semibold">График работы:</h3>
+          <h3 className="text-lg font-semibold">🕒 График работы:</h3>
           <p className="text-gray-700 dark:text-white/80">
             Будни: 9:00 - 18:00<br />
             Выходные: 10:00 - 16:00
           </p>
-          <h3 className="text-lg font-semibold mt-4">Контактный телефон:</h3>
+          <h3 className="text-lg font-semibold mt-4">📞 Контактный телефон:</h3>
           <p className="text-gray-700 dark:text-white/80">
             +123 456 7890
           </p>
-          <h3 className="text-lg font-semibold mt-4">Адрес:</h3>
+          <h3 className="text-lg font-semibold mt-4">📍 Адрес:</h3>
           <p className="text-gray-700 dark:text-white/80">
             1234 Улица, Город, Страна
           </p>
