@@ -41,6 +41,7 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
+                style={{ whiteSpace: 'nowrap', flexGrow: 1 }} // Добавленные стили
               >
                 {link.name}
 
