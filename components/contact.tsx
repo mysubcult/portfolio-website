@@ -50,8 +50,7 @@ export default function Contact() {
               alt="VK QR Code"
               width={128}
               height={128}
-              className="rounded-lg shadow-lg"
-              style={{ width: '128px', height: '128px' }}
+              className="rounded-lg shadow-lg w-32 h-32"
             />
           </motion.div>
           <motion.div
@@ -67,8 +66,7 @@ export default function Contact() {
               alt="WhatsApp QR Code"
               width={128}
               height={128}
-              className="rounded-lg shadow-lg"
-              style={{ width: '128px', height: '128px' }}
+              className="rounded-lg shadow-lg w-32 h-32"
             />
           </motion.div>
           <motion.div
@@ -84,8 +82,7 @@ export default function Contact() {
               alt="Telegram QR Code"
               width={128}
               height={128}
-              className="rounded-lg shadow-lg"
-              style={{ width: '128px', height: '128px' }}
+              className="rounded-lg shadow-lg w-32 h-32"
             />
           </motion.div>
         </div>
