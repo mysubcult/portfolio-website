@@ -25,10 +25,10 @@ export default function Contact() {
       className="mb-28 max-w-[70rem] scroll-mt-28 text-center sm:mb-40 mx-auto"
     >
       <SectionHeading>✉️ Обратная связь</SectionHeading>
-      <div className="flex flex-col sm:flex-row w-full">
+      <div className="flex flex-col sm:flex-row w-full gap-8">
         <div className="w-full sm:w-1/2 p-4">
-          <h2 className="text-lg font-semibold">📞 Контакты</h2>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4 justify-center">
+          <h2 className="text-lg font-semibold mb-4">📞 Контакты</h2>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4 justify-center gap-4">
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -79,13 +79,13 @@ export default function Contact() {
             </motion.div>
           </div>
           <div className="mt-8">
-            <h3 className="text-base font-semibold">🕒 График работы:</h3>
-            <p className="text-gray-700 dark:text-white/80">
+            <h3 className="text-base font-semibold mb-2">🕒 График работы:</h3>
+            <p className="text-gray-700 dark:text-white/80 mb-4">
               Будни: 9:00 - 18:00<br />
               Выходные: 10:00 - 16:00
             </p>
-            <h3 className="text-base font-semibold mt-4">📞 Контактный телефон:</h3>
-            <button onClick={togglePhoneVisibility} className="text-gray-700 dark:text-white/80 underline">
+            <h3 className="text-base font-semibold mb-2">📞 Контактный телефон:</h3>
+            <button onClick={togglePhoneVisibility} className="text-gray-700 dark:text-white/80 underline mb-4">
               <motion.span
                 initial={{ filter: "blur(5px)" }}
                 animate={{ filter: showPhone ? "blur(0px)" : "blur(5px)" }}
@@ -100,7 +100,7 @@ export default function Contact() {
                 )}
               </motion.span>
             </button>
-            <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
+            <h3 className="text-base font-semibold mb-2">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
               ул. Мира, 113, Тольятти, Самарская обл., 445054
             </p>
@@ -108,7 +108,7 @@ export default function Contact() {
         </div>
         <div className="w-full sm:w-1/2 p-4">
           <h2 className="text-lg font-semibold mb-4">📨 Форма обратной связи</h2>
-          <p className="text-gray-700 dark:text-white/80">
+          <p className="text-gray-700 dark:text-white/80 mb-6">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
             <a className="underline" href="mailto:example@gmail.com">
               example@gmail.com
@@ -129,7 +129,7 @@ export default function Contact() {
             }}
           >
             <input
-              className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+              className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none mb-4"
               name="senderEmail"
               type="email"
               required
@@ -137,7 +137,7 @@ export default function Contact() {
               placeholder="Ваш email"
             />
             <textarea
-              className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+              className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none mb-4"
               name="message"
               placeholder="Ваше сообщение"
               required
