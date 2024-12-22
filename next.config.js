@@ -12,8 +12,8 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    serverActions: {}, // Change this to an empty object
+  experimental: process.env.NODE_ENV === 'production' ? {} : {
+    serverActions: {},
   },
 };
 
