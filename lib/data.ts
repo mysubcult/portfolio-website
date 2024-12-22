@@ -19,11 +19,11 @@ export const links = [
   },
   {
     name: "Цены",
-    hash: "#projects",
+    hash: "#prices",
   },
   {
     name: "Услуги",
-    hash: "#skills",
+    hash: "#services",
   },
   {
     name: "Квалификация",
@@ -80,7 +80,7 @@ export const experiencesData = [
   }
 ] as const;
 
-export const projectsData = [
+export const priceData = [
   {
     title: "Капитальный ремонт ТНВД",
     description:
@@ -107,7 +107,7 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
+export const servicesData = [
   "Капитальный ремонт ТНВД",
   "Замена и ремонт насосов",
   "Обслуживание автомобилей Peugeot, Citroen, BMW, Mini",
