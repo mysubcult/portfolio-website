@@ -17,7 +17,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[70rem] scroll-mt-28 text-center sm:mb-40 mx-auto"
     >
       <SectionHeading>📨 Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full">
