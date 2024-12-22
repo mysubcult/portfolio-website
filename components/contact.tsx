@@ -26,9 +26,9 @@ export default function Contact() {
     >
       <SectionHeading>✉️ Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full">
-        <div className="w-full sm:w-1/2 p-4">
-          <h2 className="text-lg font-semibold">📞 Контакты</h2>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4 justify-center">
+        <div className="w-full sm:w-1/2 p-4 flex flex-col items-start">
+          <h2 className="text-lg font-semibold mb-4">📞 Контакты</h2>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4 justify-center w-full">
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -78,7 +78,7 @@ export default function Contact() {
               />
             </motion.div>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 w-full">
             <h3 className="text-base font-semibold">🕒 График работы:</h3>
             <p className="text-gray-700 dark:text-white/80">
               Будни: 9:00 - 18:00<br />
@@ -106,7 +106,7 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 p-4 flex flex-col items-start">
+        <div className="w-full sm:w-1/2 p-4">
           <h2 className="text-lg font-semibold mb-4">📨 Форма обратной связи</h2>
           <p className="text-gray-700 dark:text-white/80 mb-4">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
@@ -116,7 +116,7 @@ export default function Contact() {
             или через эту форму.
           </p>
           <form
-            className="mt-10 flex flex-col dark:text-black w-full"
+            className="mt-10 flex flex-col dark:text-black"
             action={async (formData) => {
               const { data, error } = await sendEmail(formData);
 
