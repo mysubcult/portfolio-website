@@ -12,10 +12,9 @@ const nextConfig = {
       },
     ],
   },
-  // Remove the experimental section
-  // experimental: {
-  //   serverActions: {},
-  // },
+  experimental: {
+    serverActions: {}, // Change this to an empty object
+  },
 };
 
 module.exports = nextConfig;
