@@ -22,8 +22,8 @@ export default function Contact() {
       <SectionHeading>📨 Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full">
         <div className="w-full sm:w-1/2 p-4">
-          <SectionHeading>📞 Контакты</SectionHeading>
-          <h3 className="text-lg font-semibold">🌐 Мы в социальных сетях:</h3>
+          <h2 className="text-lg font-semibold">📞 Контакты</h2>
+          <h3 className="text-base font-semibold">🌐 Мы в социальных сетях:</h3>
           <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4">
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -75,16 +75,16 @@ export default function Contact() {
             </motion.div>
           </div>
           <div className="mt-8">
-            <h3 className="text-lg font-semibold">🕒 График работы:</h3>
+            <h3 className="text-base font-semibold">🕒 График работы:</h3>
             <p className="text-gray-700 dark:text-white/80">
               Будни: 9:00 - 18:00<br />
               Выходные: 10:00 - 16:00
             </p>
-            <h3 className="text-lg font-semibold mt-4">📞 Контактный телефон:</h3>
+            <h3 className="text-base font-semibold mt-4">📞 Контактный телефон:</h3>
             <p className="text-gray-700 dark:text-white/80">
               +123 456 7890
             </p>
-            <h3 className="text-lg font-semibold mt-4">📍 Адрес:</h3>
+            <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
               1234 Улица, Город, Страна
             </p>
@@ -102,7 +102,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-full sm:w-1/2 p-4">
-          <SectionHeading>📨 Форма обратной связи</SectionHeading>
+          <h2 className="text-lg font-semibold">✉️ Форма обратной связи</h2>
           <p className="text-gray-700 -mt-6 dark:text-white/80">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
             <a className="underline" href="mailto:example@gmail.com">
