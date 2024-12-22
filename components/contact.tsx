@@ -86,7 +86,7 @@ export default function Contact() {
             </p>
             <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
-              г. Тольятти, Самарская область, ул. Мира, торговый центр Апельсин
+              ул. Мира, 113, Тольятти, Самарская обл., 445054
             </p>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function Contact() {
       <div className="w-full mt-8">
         <h2 className="text-lg font-semibold mb-4">🌍 Мы на карте</h2>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.751733151978!2d49.4207473158996!3d53.50853998007921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41eba5290296f1e7%3A0x92f21f38b96b840!2z0KLQstC10YDRgdC60LDRjyDQvtCx0LsuINCc0L7RgNC40YLQtdGA0LHRg9C6LCDQo9C30LHQu9Cw0YHRgtGMLCAxMDAwMA!5e0!3m2!1sru!2sru!4v1633024167757!5m2!1sru!2sru"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2372.625496765013!2d49.44457003041072!3d53.51088505855271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687f4866fcfd7d%3A0x85f659284c3131e3!2z0YPQuy4g0JzQuNGA0LAsIDExMywg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTA1NA!5e0!3m2!1sru!2sru!4v1734877094477!5m2!1sru!2sru"
           width="100%"
           height="300"
           style={{ border: 0 }}
