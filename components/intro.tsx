@@ -32,11 +32,11 @@ export default function Intro() {
             <Image
               src="/photo.jpg"
               alt="Vladimir portrait"
-              width="192"
-              height="192"
+              width="256"
+              height="256"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -74,7 +74,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Обратная связь");
             setTimeOfLastClick(Date.now());
@@ -86,7 +86,7 @@ export default function Intro() {
 
         <Link
           href="#projects"
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           onClick={() => {
             setActiveSection("Цены");
             setTimeOfLastClick(Date.now());
@@ -97,27 +97,27 @@ export default function Intro() {
 
         <div className="flex flex-row sm:flex-row gap-2">
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://vk.com"
             target="_blank"
           >
-            <FaVk />
+            <FaVk size={24} />
           </a>
 
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://telegram.org"
             target="_blank"
           >
-            <FaTelegramPlane />
+            <FaTelegramPlane size={24} />
           </a>
 
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://whatsapp.com"
             target="_blank"
           >
-            <FaWhatsapp />
+            <FaWhatsapp size={24} />
           </a>
         </div>
       </motion.div>
