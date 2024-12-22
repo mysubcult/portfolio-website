@@ -106,9 +106,9 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 p-4">
+        <div className="w-full sm:w-1/2 p-4 flex flex-col items-start">
           <h2 className="text-lg font-semibold mb-4">📨 Форма обратной связи</h2>
-          <p className="text-gray-700 dark:text-white/80">
+          <p className="text-gray-700 dark:text-white/80 mb-4">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
             <a className="underline" href="mailto:example@gmail.com">
               example@gmail.com
@@ -116,7 +116,7 @@ export default function Contact() {
             или через эту форму.
           </p>
           <form
-            className="mt-10 flex flex-col dark:text-black"
+            className="mt-10 flex flex-col dark:text-black w-full"
             action={async (formData) => {
               const { data, error } = await sendEmail(formData);
 
