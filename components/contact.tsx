@@ -14,22 +14,10 @@ export default function Contact() {
   const { ref } = useSectionInView("Обратная связь");
 
   return (
-    <motion.section
+    <section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 flex flex-col w-full text-center"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
+      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>📨 Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full">
@@ -154,6 +142,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
