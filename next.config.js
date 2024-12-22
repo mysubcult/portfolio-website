@@ -12,9 +12,10 @@ const nextConfig = {
       },
     ],
   },
-  experimental: process.env.NODE_ENV === 'production' ? {} : {
-    serverActions: {},
-  },
+  // Remove the experimental section
+  // experimental: {
+  //   serverActions: {},
+  // },
 };
 
 module.exports = nextConfig;
