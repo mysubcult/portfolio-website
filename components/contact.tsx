@@ -19,10 +19,22 @@ export default function Contact() {
   };
 
   return (
-    <section
+    <motion.section
       id="contact"
       ref={ref}
       className="mb-28 max-w-[70rem] scroll-mt-28 text-center sm:mb-40 mx-auto"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
     >
       <SectionHeading>✉️ Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full gap-8">
@@ -159,6 +171,6 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </section>
+    </motion.section>
   );
 }
