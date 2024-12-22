@@ -95,7 +95,13 @@ export default function Contact() {
                   +123 456 7890
                 </motion.span>
               ) : (
-                "Показать номер телефона"
+                <motion.span
+                  initial={{ filter: "blur(0px)" }}
+                  animate={{ filter: "blur(10px)" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Показать номер телефона
+                </motion.span>
               )}
             </button>
             <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
