@@ -111,7 +111,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-1/2 p-4 flex flex-col items-center">
+      <div className="w-full sm:w-1/2 p-4">
         <SectionHeading>📨 Обратная связь</SectionHeading>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
           Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
@@ -121,7 +121,7 @@ export default function Contact() {
           или через эту форму.
         </p>
         <form
-          className="mt-10 flex flex-col w-full max-w-md dark:text-black"
+          className="mt-10 flex flex-col dark:text-black"
           action={async (formData) => {
             const { data, error } = await sendEmail(formData);
 
@@ -148,11 +148,8 @@ export default function Contact() {
             required
             maxLength={5000}
           />
-          <SubmitBtn className="w-full" />
+          <SubmitBtn />
         </form>
-        <p className="mt-4 text-gray-700 dark:text-white/80">
-          Спасибо за ваше сообщение!
-        </p>
       </div>
     </motion.section>
   );
