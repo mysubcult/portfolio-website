@@ -132,7 +132,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="w-full mt-8">
-        <h2 className="text-lg font-semibold mb-4">🗺 Мы на карте</h2>
+        <h2 className="text-lg font-semibold mb-4">🌍 Мы на карте</h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434501749!2d30.52333331546757!3d50.4501009794921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4f4571bf51%3A0x764931d2170146fe!2z0JrQuNC90YLQtdC90LjRjw!5e0!3m2!1sru!2sua!4v1633024167757!5m2!1sru!2sua"
           width="100%"
