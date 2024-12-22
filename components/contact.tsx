@@ -23,7 +23,6 @@ export default function Contact() {
       <div className="flex flex-col sm:flex-row w-full">
         <div className="w-full sm:w-1/2 p-4">
           <h2 className="text-lg font-semibold">📞 Контакты</h2>
-          <h3 className="text-base font-semibold">🌐 Мы в социальных сетях:</h3>
           <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4 justify-center">
             <motion.div
               whileHover={{ scale: 1.1 }}
