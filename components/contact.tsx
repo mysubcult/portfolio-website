@@ -32,7 +32,7 @@ export default function Contact() {
       }}
     >
       <div className="w-full sm:w-1/2 p-4">
-        <SectionHeading>📞 Контакты</SectionHeading>
+        <SectionHeading>📨 Обратная связь</SectionHeading>
         <h3 className="text-lg font-semibold">🌐 Мы в социальных сетях:</h3>
         <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4">
           <motion.div
@@ -112,7 +112,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="w-full sm:w-1/2 p-4">
-        <SectionHeading>📨 Обратная связь</SectionHeading>
+        <SectionHeading>📨 Форма обратной связи</SectionHeading>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
           Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
           <a className="underline" href="mailto:example@gmail.com">
