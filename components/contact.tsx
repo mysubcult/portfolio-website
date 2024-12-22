@@ -19,7 +19,11 @@ export default function Contact() {
   };
 
   return (
-    <section ref={ref} id="contact" className="scroll-mt-28 mb-28">
+    <section
+      id="contact"
+      ref={ref}
+      className="mb-28 max-w-[70rem] scroll-mt-28 text-center sm:mb-40 mx-auto"
+    >
       <SectionHeading>✉️ Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full gap-8">
         <div className="w-full sm:w-1/2 p-4">
