@@ -102,8 +102,8 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-full sm:w-1/2 p-4">
-          <h2 className="text-lg font-semibold">✉️ Форма обратной связи</h2>
-          <p className="text-gray-700 -mt-6 dark:text-white/80">
+          <h2 className="text-lg font-semibold mb-4">✉️ Форма обратной связи</h2>
+          <p className="text-gray-700 dark:text-white/80">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
             <a className="underline" href="mailto:example@gmail.com">
               example@gmail.com
