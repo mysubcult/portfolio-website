@@ -86,7 +86,17 @@ export default function Contact() {
             </p>
             <h3 className="text-base font-semibold mt-4">📞 Контактный телефон:</h3>
             <button onClick={togglePhoneVisibility} className="text-gray-700 dark:text-white/80 underline">
-              {showPhone ? "+123 456 7890" : "Показать номер телефона"}
+              {showPhone ? (
+                <motion.span
+                  initial={{ filter: "blur(10px)" }}
+                  animate={{ filter: "blur(0px)" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  +123 456 7890
+                </motion.span>
+              ) : (
+                "Показать номер телефона"
+              )}
             </button>
             <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
