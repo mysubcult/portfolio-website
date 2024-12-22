@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -12,6 +12,11 @@ import Image from "next/image";
 
 export default function Contact() {
   const { ref } = useSectionInView("Обратная связь");
+  const [showPhone, setShowPhone] = useState(false);
+
+  const togglePhoneVisibility = () => {
+    setShowPhone(!showPhone);
+  };
 
   return (
     <section
@@ -80,9 +85,9 @@ export default function Contact() {
               Выходные: 10:00 - 16:00
             </p>
             <h3 className="text-base font-semibold mt-4">📞 Контактный телефон:</h3>
-            <p className="text-gray-700 dark:text-white/80">
-              +123 456 7890
-            </p>
+            <button onClick={togglePhoneVisibility} className="text-gray-700 dark:text-white/80 underline">
+              {showPhone ? "+123 456 7890" : "Показать номер телефона"}
+            </button>
             <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
               ул. Мира, 113, Тольятти, Самарская обл., 445054
