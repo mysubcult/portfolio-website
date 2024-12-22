@@ -19,7 +19,7 @@ export default function Contact() {
       ref={ref}
       className="mb-28 max-w-[70rem] scroll-mt-28 text-center sm:mb-40 mx-auto"
     >
-      <SectionHeading>📨 Обратная связь</SectionHeading>
+      <SectionHeading>✉️ Обратная связь</SectionHeading>
       <div className="flex flex-col sm:flex-row w-full">
         <div className="w-full sm:w-1/2 p-4">
           <h2 className="text-lg font-semibold">📞 Контакты</h2>
@@ -91,7 +91,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-full sm:w-1/2 p-4">
-          <h2 className="text-lg font-semibold mb-4">✉️ Форма обратной связи</h2>
+          <h2 className="text-lg font-semibold mb-4">📨 Форма обратной связи</h2>
           <p className="text-gray-700 dark:text-white/80">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
             <a className="underline" href="mailto:example@gmail.com">
