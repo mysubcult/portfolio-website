@@ -15,7 +15,7 @@ export default function Contact() {
   const [showPhone, setShowPhone] = useState(false);
 
   const togglePhoneVisibility = () => {
-    setShowPhone(!showPhone);
+    setShowPhone(true);
   };
 
   return (
@@ -86,13 +86,19 @@ export default function Contact() {
             </p>
             <h3 className="text-base font-semibold mt-4">📞 Контактный телефон:</h3>
             <button onClick={togglePhoneVisibility} className="text-gray-700 dark:text-white/80 underline">
-              <motion.span
-                initial={{ filter: "blur(5px)" }}
-                animate={{ filter: showPhone ? "blur(0px)" : "blur(5px)" }}
-                transition={{ duration: 0.5 }}
-              >
-                +123 456 7890
-              </motion.span>
+              {showPhone ? (
+                <a href="tel:+1234567890" className="text-gray-700 dark:text-white/80 underline">
+                  +123 456 7890
+                </a>
+              ) : (
+                <motion.span
+                  initial={{ filter: "blur(5px)" }}
+                  animate={{ filter: showPhone ? "blur(0px)" : "blur(5px)" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  +123 456 7890
+                </motion.span>
+              )}
             </button>
             <h3 className="text-base font-semibold mt-4">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
