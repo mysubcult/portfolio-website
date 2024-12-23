@@ -130,8 +130,8 @@ export default function Contact() {
           <h2 className="text-lg font-semibold mb-4">📨 Форма обратной связи</h2>
           <p className="text-gray-700 dark:text-white/80 mb-6">
             Пожалуйста, свяжитесь с нами напрямую по адресу{" "}
-            <a className="underline" href="mailto:example@gmail.com">
-              example@gmail.com
+            <a className="underline" href="mailto:vladimir@тнвд-ремонт.рф">
+              vladimir@тнвд-ремонт.рф
             </a>{" "}
             или через эту форму.
           </p>
