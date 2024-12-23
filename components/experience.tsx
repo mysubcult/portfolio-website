@@ -1,8 +1,6 @@
-// /components/experience.tsx
-
 "use client";
 
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
@@ -17,6 +15,10 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const { ref } = useSectionInView("Квалификация", 0.3);
   const { theme } = useTheme();
+
+  useLayoutEffect(() => {
+    // Предзагрузка данных или другие синхронные операции
+  }, []);
 
   return (
     <motion.section
