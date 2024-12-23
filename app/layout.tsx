@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
 export const metadata = {
   title: "Евдокимов Владимир | Ремонт ТНВД Тольятти",
@@ -26,6 +27,8 @@ export const metadata = {
     type: "website",
   },
 };
+
+const analyticsEnabled = !!(process.env.NODE_ENV === "production");
 
 export default function RootLayout({
   children,
@@ -72,6 +75,7 @@ export default function RootLayout({
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <YandexMetrikaContainer enabled={analyticsEnabled} />
       </body>
     </html>
   );
