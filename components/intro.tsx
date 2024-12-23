@@ -100,7 +100,7 @@ export default function Intro() {
         <div className="flex flex-row sm:flex-row gap-2">
           <a
             className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://vk.com"
+            href="https://vk.com/evdokimovrus"
             target="_blank"
           >
             <FaVk size={24} />
@@ -108,7 +108,7 @@ export default function Intro() {
 
           <a
             className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://telegram.org"
+            href="https://t.me/+79879317210"
             target="_blank"
           >
             <FaTelegramPlane size={24} />
@@ -116,7 +116,7 @@ export default function Intro() {
 
           <a
             className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://whatsapp.com"
+            href="https://wa.me/79879317210"
             target="_blank"
           >
             <FaWhatsapp size={24} />
