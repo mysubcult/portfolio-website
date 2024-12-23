@@ -57,45 +57,40 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl sm:text-3xl font-medium !leading-[1.5]"
+        className="mb-10 mt-4 px-4 text-xl sm:text-3xl font-medium leading-[1.5]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Приветствую!</span> Меня зовут <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Владимир</span>. Я специализируюсь на <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">ремонте ТНВД</span> для автомобилей марки <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
       </motion.h1>
 
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Обратная связь");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Связаться со мной{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+      <div className="flex flex-col">
+        <div className="flex flex-row justify-center gap-2 px-4 text-lg font-medium">
+          <Link
+            href="#contact"
+            className="group bg-gray-900 text-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+            onClick={() => {
+              setActiveSection("Обратная связь");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            Связаться со мной{" "}
+            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          </Link>
 
-        <Link
-          href="#prices"
-          className="group bg-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          onClick={() => {
-            setActiveSection("Цены");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Цены{" "}
-        </Link>
+          <Link
+            href="#prices"
+            className="group bg-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+            onClick={() => {
+              setActiveSection("Цены");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            Цены
+          </Link>
+        </div>
 
-        <div className="flex flex-row sm:flex-row gap-2">
+        <div className="flex flex-row justify-center gap-2 mt-2">
           <a
             className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://vk.com/evdokimovrus"
@@ -120,7 +115,7 @@ export default function Intro() {
             <FaWhatsapp size={24} />
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
