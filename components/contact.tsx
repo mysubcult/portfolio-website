@@ -46,48 +46,54 @@ export default function Contact() {
               whileTap={{ scale: 0.9 }}
               className="flex flex-col items-center"
             >
-              <a href="https://vk.com/your_vk_page" className="mb-2 flex items-center mt-4">
+              <a href="https://vk.com/evdokimovrus" className="mb-2 flex items-center mt-4">
                 <FaVk className="mr-2 text-blue-500" /> ВКонтакте
               </a>
-              <Image
-                src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/your_vk_page"
-                alt="VK QR Code"
-                width={128}
-                height={128}
-                className="rounded-lg shadow-lg w-32 h-32"
-              />
+              <a href="https://vk.com/evdokimovrus">
+                <Image
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/evdokimovrus"
+                  alt="VK QR Code"
+                  width={128}
+                  height={128}
+                  className="rounded-lg shadow-lg w-32 h-32"
+                />
+              </a>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="flex flex-col items-center"
             >
-              <a href="https://wa.me/your_whatsapp_number" className="mb-2 flex items-center mt-4">
+              <a href="https://wa.me/+79879317210" className="mb-2 flex items-center mt-4">
                 <FaWhatsapp className="mr-2 text-green-500" /> WhatsApp
               </a>
-              <Image
-                src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/your_whatsapp_number"
-                alt="WhatsApp QR Code"
-                width={128}
-                height={128}
-                className="rounded-lg shadow-lg w-32 h-32"
-              />
+              <a href="https://wa.me/+79879317210">
+                <Image
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/+79879317210"
+                  alt="WhatsApp QR Code"
+                  width={128}
+                  height={128}
+                  className="rounded-lg shadow-lg w-32 h-32"
+                />
+              </a>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="flex flex-col items-center"
             >
-              <a href="https://t.me/your_telegram_username" className="mb-2 flex items-center mt-4">
+              <a href="https://t.me/+79879317210" className="mb-2 flex items-center mt-4">
                 <FaTelegram className="mr-2 text-blue-400" /> Telegram
               </a>
-              <Image
-                src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/your_telegram_username"
-                alt="Telegram QR Code"
-                width={128}
-                height={128}
-                className="rounded-lg shadow-lg w-32 h-32"
-              />
+              <a href="https://t.me/+79879317210">
+                <Image
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/+79879317210"
+                  alt="Telegram QR Code"
+                  width={128}
+                  height={128}
+                  className="rounded-lg shadow-lg w-32 h-32"
+                />
+              </a>
             </motion.div>
           </div>
           <div className="mt-8">
@@ -104,11 +110,11 @@ export default function Contact() {
                 transition={{ duration: 0.5 }}
               >
                 {showPhone ? (
-                  <a href="tel:+1234567890" className="text-gray-700 dark:text-white/80 underline">
-                    +123 456 7890
+                  <a href="tel:+79879317210" className="text-gray-700 dark:text-white/80 underline">
+                    +7 987 931 7210
                   </a>
                 ) : (
-                  "+123 456 7890"
+                  "+7 987 931 7210"
                 )}
               </motion.span>
             </button>
