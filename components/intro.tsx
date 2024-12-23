@@ -33,7 +33,7 @@ export default function Intro() {
           >
             <Image
               src="/photo.jpg"
-              alt="Vladimir portrait"
+              alt="Фотография Владимира Евдокимова"
               width="256"
               height="256"
               quality="95"
