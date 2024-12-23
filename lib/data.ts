@@ -1,3 +1,5 @@
+// /lib/data.ts
+
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact, FaCar, FaTools } from "react-icons/fa";

@@ -1,3 +1,5 @@
+// /components/section-heading.tsx
+
 import React from "react";
 
 type SectionHeadingProps = {

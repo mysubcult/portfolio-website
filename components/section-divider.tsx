@@ -1,3 +1,5 @@
+// /components/section-devider.tsx
+
 "use client";
 
 import React from "react";

@@ -1,3 +1,5 @@
+// /components/theme-switch.tsx
+
 "use client";
 
 import { useTheme } from "@/context/theme-context";

@@ -1,3 +1,5 @@
+// /components/contact.tsx
+
 "use client";
 
 import React, { useState } from "react";
@@ -11,7 +13,7 @@ import { FaVk, FaWhatsapp, FaTelegram } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Contact() {
-  const { ref } = useSectionInView("Обратная связь");
+  const { ref } = useSectionInView("Обратная связь", 0.3);
   const [showPhone, setShowPhone] = useState(false);
 
   const togglePhoneVisibility = () => {

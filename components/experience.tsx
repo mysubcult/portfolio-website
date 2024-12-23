@@ -1,3 +1,5 @@
+// /components/experience.tsx
+
 "use client";
 
 import React from "react";
@@ -13,7 +15,7 @@ import { useTheme } from "@/context/theme-context";
 import { motion } from "framer-motion";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Квалификация", 0.5);
+  const { ref } = useSectionInView("Квалификация", 0.3);
   const { theme } = useTheme();
 
   return (

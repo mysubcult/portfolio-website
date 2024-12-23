@@ -1,3 +1,5 @@
+// /components/price.tsx
+
 "use client";
 
 import { useRef } from "react";
