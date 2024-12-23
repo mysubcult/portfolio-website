@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Евдокимов Владимир | Ремонт ТНВД Тольятти",
-  description: "Ricardo is a full-stack developer with 8 years of experience.",
+  description: "Ремонт ТНВД в Тольятти. Капитальный ремонт, диагностика, замена насосов для автомобилей Peugeot, Citroen, BMW, Mini. Гарантия и доставка.",
 };
 
 export default function RootLayout({
