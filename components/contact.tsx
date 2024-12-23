@@ -113,10 +113,10 @@ export default function Contact() {
               >
                 {showPhone ? (
                   <a href="tel:+79879317210" className="text-gray-700 dark:text-white/80 underline">
-                    +7 987 931 7210
+                    +7 (987) 931-72-10
                   </a>
                 ) : (
-                  "+7 987 931 7210"
+                  "+7 (987) 931-72-10"
                 )}
               </motion.span>
             </button>
@@ -145,7 +145,7 @@ export default function Contact() {
                 return;
               }
 
-              toast.success("Email sent successfully!");
+              toast.success("Email отправлен успешно!");
             }}
           >
             <input
