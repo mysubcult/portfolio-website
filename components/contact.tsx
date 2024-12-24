@@ -87,7 +87,7 @@ export default function Contact() {
               <a href="https://t.me/+79879317210" className="mb-2 flex items-center mt-4">
                 <FaTelegram className="mr-2 text-blue-400" /> Telegram
               </a>
-              <a href="https://t.me/+79879317210">
+              <a href="https://t.me/VladimirYE1">
                 <Image
                   src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/+79879317210"
                   alt="Telegram QR Code"
