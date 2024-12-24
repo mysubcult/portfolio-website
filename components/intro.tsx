@@ -108,7 +108,7 @@ export default function Intro() {
 
           <a
             className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://t.me/+79879317210"
+            href="https://t.me/VladimirYE1"
             target="_blank"
           >
             <FaTelegramPlane size={24} />
