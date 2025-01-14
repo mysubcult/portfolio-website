@@ -51,7 +51,7 @@ export default function Contact() {
               </a>
               <a href="https://vk.com/evdokimovrus">
                 <Image
-                  src="/path/to/custom-vk-qr-code.png" // Замените на путь к вашему кастомному QR-коду
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/evdokimovrus" // Замените на путь к вашему кастомному QR-коду
                   alt="VK QR Code"
                   width={128}
                   height={128}
@@ -69,7 +69,7 @@ export default function Contact() {
               </a>
               <a href="https://wa.me/+79879317210">
                 <Image
-                  src="/path/to/custom-whatsapp-qr-code.png" // Замените на путь к вашему кастомному QR-коду
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/+79879317210" // Замените на путь к вашему кастомному QR-коду
                   alt="WhatsApp QR Code"
                   width={128}
                   height={128}
@@ -87,7 +87,7 @@ export default function Contact() {
               </a>
               <a href="https://t.me/VladimirYE1">
                 <Image
-                  src="/path/to/custom-telegram-qr-code.png" // Замените на путь к вашему кастомному QR-коду
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/+79879317210" // Замените на путь к вашему кастомному QR-коду
                   alt="Telegram QR Code"
                   width={128}
                   height={128}
