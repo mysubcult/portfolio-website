@@ -26,10 +26,42 @@ export default function About() {
         </span>. Моя цель — обеспечить надежную и качественную работу вашего двигателя.
       </p>
       <div className="flex justify-center space-x-4 mb-3">
-        <siPeugeot className="text-4xl text-blue-500" />
-        <siCitroen className="text-4xl text-red-500" />
-        <siBmw className="text-4xl text-blue-900" />
-        <siMini className="text-4xl text-black" />
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-4xl text-blue-500"
+          fill="currentColor"
+        >
+          <path d={siPeugeot.path} />
+        </svg>
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-4xl text-red-500"
+          fill="currentColor"
+        >
+          <path d={siCitroen.path} />
+        </svg>
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-4xl text-blue-900"
+          fill="currentColor"
+        >
+          <path d={siBmw.path} />
+        </svg>
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-4xl text-black"
+          fill="currentColor"
+        >
+          <path d={siMini.path} />
+        </svg>
       </div>
       <p className="mb-3">
         Если ваш двигатель <span className="italic text-red-500"><strong>троит, глохнет, теряет мощность и динамику разгона</strong></span>, или выдает ошибки <span className="font-medium text-blue-500"><strong>Check Engine</strong></span> (например, <span className="font-medium text-blue-500"><strong>P0087, P0088, P1336, P2880</strong></span> и другие), это может указывать на неисправность ТНВД. 🛠️
