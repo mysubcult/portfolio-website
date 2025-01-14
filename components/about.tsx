@@ -1,11 +1,10 @@
-// /components/about.tsx
-
 "use client";
 
 import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { FaPeugeot, FaCitroen, FaBmw, FaMini } from "react-icons/fa"; // Пример иконок
 
 export default function About() {
   const { ref } = useSectionInView("Обо мне");
@@ -21,8 +20,17 @@ export default function About() {
     >
       <SectionHeading>👋 Обо мне</SectionHeading>
       <p className="mb-3">
-        Добро пожаловать! Я специализируюсь на <span className="font-medium text-blue-500"><strong>ремонте ТНВД</strong></span> для автомобилей марки <span className="font-medium text-blue-500"><strong>Peugeot, Citroen, BMW и Mini</strong></span>. Моя цель — обеспечить надежную и качественную работу вашего двигателя.
+        Добро пожаловать! Я специализируюсь на <span className="font-medium text-blue-500"><strong>ремонте ТНВД</strong></span> для автомобилей марки{" "}
+        <span className="font-medium text-blue-500">
+          <strong>Peugeot, Citroen, BMW и Mini</strong>
+        </span>. Моя цель — обеспечить надежную и качественную работу вашего двигателя.
       </p>
+      <div className="flex justify-center space-x-4 mb-3">
+        <FaPeugeot className="text-4xl text-blue-500" />
+        <FaCitroen className="text-4xl text-red-500" />
+        <FaBmw className="text-4xl text-blue-900" />
+        <FaMini className="text-4xl text-black" />
+      </div>
       <p className="mb-3">
         Если ваш двигатель <span className="italic text-red-500"><strong>троит, глохнет, теряет мощность и динамику разгона</strong></span>, или выдает ошибки <span className="font-medium text-blue-500"><strong>Check Engine</strong></span> (например, <span className="font-medium text-blue-500"><strong>P0087, P0088, P1336, P2880</strong></span> и другие), это может указывать на неисправность ТНВД. 🛠️
       </p>
