@@ -4,7 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { siPeugeot, siCitroen, siBmw, siMini } from "simple-icons/icons"; // Пример иконок
+import { siPeugeot, siCitroen, siBmw, siMini } from "simple-icons";
 
 export default function About() {
   const { ref } = useSectionInView("Обо мне");
