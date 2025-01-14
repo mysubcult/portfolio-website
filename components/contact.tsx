@@ -1,5 +1,3 @@
-// /components/contact.tsx
-
 "use client";
 
 import React, { useState } from "react";
@@ -42,18 +40,18 @@ export default function Contact() {
       <div className="flex flex-col sm:flex-row w-full gap-8">
         <div className="w-full sm:w-1/2 p-4">
           <h2 className="text-lg font-semibold mb-4">📞 Контакты</h2>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 space-x-4 justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 justify-center gap-4">
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center mb-4 sm:mb-0"
             >
               <a href="https://vk.com/evdokimovrus" className="mb-2 flex items-center mt-4">
                 <FaVk className="mr-2 text-blue-500" /> ВКонтакте
               </a>
               <a href="https://vk.com/evdokimovrus">
                 <Image
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://vk.com/evdokimovrus"
+                  src="/path/to/custom-vk-qr-code.png" // Замените на путь к вашему кастомному QR-коду
                   alt="VK QR Code"
                   width={128}
                   height={128}
@@ -64,14 +62,14 @@ export default function Contact() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center mb-4 sm:mb-0"
             >
               <a href="https://wa.me/+79879317210" className="mb-2 flex items-center mt-4">
                 <FaWhatsapp className="mr-2 text-green-500" /> WhatsApp
               </a>
               <a href="https://wa.me/+79879317210">
                 <Image
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://wa.me/+79879317210"
+                  src="/path/to/custom-whatsapp-qr-code.png" // Замените на путь к вашему кастомному QR-коду
                   alt="WhatsApp QR Code"
                   width={128}
                   height={128}
@@ -82,14 +80,14 @@ export default function Contact() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center mb-4 sm:mb-0"
             >
               <a href="https://t.me/+79879317210" className="mb-2 flex items-center mt-4">
                 <FaTelegram className="mr-2 text-blue-400" /> Telegram
               </a>
               <a href="https://t.me/VladimirYE1">
                 <Image
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://t.me/+79879317210"
+                  src="/path/to/custom-telegram-qr-code.png" // Замените на путь к вашему кастомному QR-коду
                   alt="Telegram QR Code"
                   width={128}
                   height={128}
