@@ -30,7 +30,7 @@ export default function About() {
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-blue-500 hover:text-blue-700 transition-colors duration-200"
+          className="text-2xl text-blue-500 hover:text-blue-700 transition-colors duration-200"
           fill="currentColor"
         >
           <path d={siPeugeot.path} />
@@ -39,7 +39,7 @@ export default function About() {
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-red-500 hover:text-red-700 transition-colors duration-200"
+          className="text-2xl text-red-500 hover:text-red-700 transition-colors duration-200"
           fill="currentColor"
         >
           <path d={siCitroen.path} />
@@ -48,7 +48,7 @@ export default function About() {
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-blue-900 hover:text-blue-950 transition-colors duration-200"
+          className="text-2xl text-blue-900 hover:text-blue-950 transition-colors duration-200"
           fill="currentColor"
         >
           <path d={siBmw.path} />
@@ -57,7 +57,7 @@ export default function About() {
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-black hover:text-gray-700 transition-colors duration-200"
+          className="text-2xl text-black hover:text-gray-700 transition-colors duration-200"
           fill="currentColor"
         >
           <path d={siMini.path} />
