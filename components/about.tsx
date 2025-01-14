@@ -30,7 +30,7 @@ export default function About() {
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-2xl text-blue-500 hover:text-blue-700 transition-colors duration-200"
+          className="text-xl text-blue-500 hover:text-blue-700 transition-colors duration-200"
           fill="currentColor"
         >
           <path d={siPeugeot.path} />
