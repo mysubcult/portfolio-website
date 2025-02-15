@@ -62,17 +62,17 @@ export default function RootLayout({
         </script>
       </head>
       <body className="bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90">
-        {/* Вариант 1: Мягкие градиенты */}
-        {/* <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#90EE90] to-[#AFEEEE] dark:bg-gradient-to-br dark:from-[#483D8B] dark:to-[#6A5ACD]"></div>
-        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#AFEEEE] to-[#E0FFFF] dark:bg-gradient-to-tr dark:from-[#6A5ACD] dark:to-[#87CEFA]"></div> */}
+        {/* Вариант 1: "Техно-синий" */}
+        <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#6495ED] to-[#778899] dark:bg-gradient-to-br dark:from-[#2F4F4F] dark:to-[#4682B4]"></div>
+        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#B0C4DE] to-[#E6E6FA] dark:bg-gradient-to-tr dark:from-[#4682B4] dark:to-[#6495ED]"></div>
 
-        {/* Вариант 2: Темные и насыщенные цвета */}
-        {/* <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#4682B4] to-[#708090] dark:bg-gradient-to-br dark:from-[#2F4F4F] dark:to-[#000080]"></div>
-        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#778899] to-[#B0C4DE] dark:bg-gradient-to-tr dark:from-[#008080] dark:to-[#4682B4]"></div> */}
+        {/* Вариант 2: "Индустриальный серый" */}
+        {/* <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#A9A9A9] to-[#D3D3D3] dark:bg-gradient-to-br dark:from-[#696969] dark:to-[#808080]"></div>
+        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#F5F5DC] to-[#FFFFFF] dark:bg-gradient-to-tr dark:from-[#808080] dark:to-[#A9A9A9]"></div> */}
 
-        {/* Вариант 3: Яркие и контрастные цвета */}
-        <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#FFA07A] to-[#FA8072] dark:bg-gradient-to-br dark:from-[#8B0000] dark:to-[#DC143C]"></div>
-        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#E9967A] to-[#F08080] dark:bg-gradient-to-tr dark:from-[#A52A2A] dark:to-[#CD5C5C]"></div>
+        {/* Вариант 3: "Мягкий зеленый" */}
+        {/* <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#98FB98] to-[#ADD8E6] dark:bg-gradient-to-br dark:from-[#006400] dark:to-[#2E8B57]"></div>
+        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#E0EEE0] to-[#F0FFF0] dark:bg-gradient-to-tr dark:from-[#2E8B57] dark:to-[#3CB371]"></div> */}
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
