@@ -1,5 +1,3 @@
-// /components/intro.tsx
-
 "use client";
 
 import Image from "next/image";
@@ -63,7 +61,21 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Приветствую!</span> Меня зовут <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Владимир</span>. Я специализируюсь на <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">ремонте ТНВД</span> для автомобилей марки <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Peugeot, Citroen, BMW и Mini</span>. Моя основная задача — обеспечить надежную и качественную работу вашего двигателя.
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+          Двигатель троит? Плохой запуск?
+        </span>{" "}
+        Меня зовут{" "}
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">
+          Владимир Евдокимов
+        </span>
+        , и я помогу вам решить проблемы с ТНВД! Я специализируюсь на ремонте ТНВД для автомобилей{" "}
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+          Peugeot, Citroen, BMW и Mini
+        </span>
+        .{" "}
+        <span className="font-bold">
+          Обращайтесь, и ваш двигатель будет работать как новый!
+        </span>
       </motion.h1>
 
       <motion.div
@@ -76,13 +88,13 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:shadow-lg active:scale-105 transition"
           onClick={() => {
             setActiveSection("Обратная связь");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Связаться со мной{" "}
+          Получить бесплатную консультацию{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -94,7 +106,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Цены{" "}
+          Посмотреть цены{" "}
         </Link>
 
         <div className="flex flex-row sm:flex-row gap-2">
