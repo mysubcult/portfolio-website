@@ -1,35 +1,41 @@
 "use client";
 
-import React, { useState, useEffect, memo } from "react"; // Импортируем useState и useEffect
+import React, { useState, useEffect, memo } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { FaBars } from "react-icons/fa"; // Импортируем иконку гамбургера
+import { FaBars } from "react-icons/fa";
 
 const Header = memo(function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для открытия/закрытия меню
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Определяем, что это мобильное устройство (ширина < 768px)
+      setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); // Вызываем при монтировании компонента
+    handleResize();
 
-    window.addEventListener("resize", handleResize); // Добавляем слушатель события resize
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize); // Убираем слушатель при размонтировании
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Варианты анимации для мобильного меню
+  const mobileMenuVariants = {
+    open: { x: 0, opacity: 1, transition: { duration: 0.3, ease: "easeInOut" } },
+    closed: { x: "-100%", opacity: 0, transition: { duration: 0.3, ease: "easeInOut" } },
   };
 
   return (
@@ -53,27 +59,30 @@ const Header = memo(function Header() {
             >
               <FaBars size="1.5em" />
             </button>
+
             <motion.ul
               className={clsx(
-                "absolute top-full left-0 w-full bg-white dark:bg-gray-900 rounded-b-md shadow-md py-2 flex flex-col items-center text-lg font-semibold text-gray-500 dark:text-gray-400",
+                "fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 rounded-r-md shadow-md py-2 flex flex-col items-start text-lg font-semibold text-gray-500 dark:text-gray-400",
                 {
                   hidden: !isMenuOpen,
                 }
               )}
+              variants={mobileMenuVariants}
+              animate={isMenuOpen ? "open" : "closed"}
             >
               {links.map((link) => (
                 <motion.li
-                  className="w-full flex items-center justify-center"
+                  className="w-full"
                   key={link.hash}
                   onClick={() => {
-                    setIsMenuOpen(false); // Закрываем меню при клике
+                    setIsMenuOpen(false);
                     setActiveSection(link.name);
                     setTimeOfLastClick(Date.now());
                   }}
                 >
                   <Link
                     className={clsx(
-                      "block w-full text-center py-2 px-4 hover:text-gray-950 dark:hover:text-gray-100",
+                      "block w-full text-left py-2 px-4 hover:text-gray-950 dark:hover:text-gray-100",
                       {
                         "text-gray-950 dark:text-gray-100":
                           activeSection === link.name,
