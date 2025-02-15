@@ -62,8 +62,17 @@ export default function RootLayout({
         </script>
       </head>
       <body className="bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90">
-        <div className="bg-[#ADD8E6] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#D3D3D3]"></div>
-        <div className="bg-[#D3D3D3] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#ADD8E6]"></div>
+        {/* Вариант 1: Мягкие градиенты */}
+        {/* <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#90EE90] to-[#AFEEEE] dark:bg-gradient-to-br dark:from-[#483D8B] dark:to-[#6A5ACD]"></div>
+        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#AFEEEE] to-[#E0FFFF] dark:bg-gradient-to-tr dark:from-[#6A5ACD] dark:to-[#87CEFA]"></div> */}
+
+        {/* Вариант 2: Темные и насыщенные цвета */}
+        {/* <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#4682B4] to-[#708090] dark:bg-gradient-to-br dark:from-[#2F4F4F] dark:to-[#000080]"></div>
+        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#778899] to-[#B0C4DE] dark:bg-gradient-to-tr dark:from-[#008080] dark:to-[#4682B4]"></div> */}
+
+        {/* Вариант 3: Яркие и контрастные цвета */}
+        <div className="absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-gradient-to-br from-[#FFA07A] to-[#FA8072] dark:bg-gradient-to-br dark:from-[#8B0000] dark:to-[#DC143C]"></div>
+        <div className="absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-gradient-to-tr from-[#E9967A] to-[#F08080] dark:bg-gradient-to-tr dark:from-[#A52A2A] dark:to-[#CD5C5C]"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
