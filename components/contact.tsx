@@ -180,7 +180,7 @@ export default function Contact() {
         <div className="w-full sm:w-2/3">
           <h2 className="text-lg font-semibold mb-4">🌍 Мы на карте (ТЦ "Крым")</h2>
           <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2ec43031182e789e1985a1757b5389f97df8a5c340239a9b0f16734b2087b8b&source=constructor"
+            src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=49.452328%2C53.510642&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=49.452328%2C53.510642&whatshere%5Bzoom%5D=17&z=16"
             width="100%"
             height="300"
             style={{ border: 0 }}
