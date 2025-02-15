@@ -32,7 +32,6 @@ const Header = memo(function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Варианты анимации для мобильного меню
   const mobileMenuVariants = {
     open: { x: 0, opacity: 1, transition: { duration: 0.3, ease: "easeInOut" } },
     closed: { x: "-100%", opacity: 0, transition: { duration: 0.3, ease: "easeInOut" } },
@@ -62,7 +61,7 @@ const Header = memo(function Header() {
 
             <motion.ul
               className={clsx(
-                "fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 rounded-r-md shadow-md py-2 flex flex-col items-start text-lg font-semibold text-gray-500 dark:text-gray-400",
+                "fixed top-[5.2rem] left-0 h-screen w-screen bg-white dark:bg-gray-900 shadow-md py-2 flex flex-col items-start text-lg font-semibold text-gray-500 dark:text-gray-400",
                 {
                   hidden: !isMenuOpen,
                 }
