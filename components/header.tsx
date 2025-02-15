@@ -33,8 +33,8 @@ const Header = memo(function Header() {
   };
 
   const mobileMenuVariants = {
-    open: { x: 0, opacity: 1, transition: { duration: 0.3, ease: "easeInOut" } },
-    closed: { x: "-100%", opacity: 0, transition: { duration: 0.3, ease: "easeInOut" } },
+    open: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeInOut" } },
+    closed: { opacity: 0, y: -200, transition: { duration: 0.3, ease: "easeInOut" } },
   };
 
   return (
@@ -48,25 +48,26 @@ const Header = memo(function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[0.2rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[1.8rem] sm:h-[initial] sm:py-0">
+      <nav className="flex fixed top-[0.2rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[1.8rem] sm:h-[initial] sm:py-0 w-full">
         {isMobile ? (
           // Мобильная версия
           <div className="flex items-center justify-between w-full px-4">
             <button
               onClick={toggleMenu}
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-gray-100"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-gray-100 z-50"
             >
               <FaBars size="1.5em" />
             </button>
 
             <motion.ul
               className={clsx(
-                "fixed top-[5.2rem] left-0 h-screen w-screen bg-white dark:bg-gray-900 shadow-md py-2 flex flex-col items-start text-lg font-semibold text-gray-500 dark:text-gray-400",
+                "absolute top-[5.2rem] left-0 w-full bg-white dark:bg-gray-900 shadow-md py-2 flex flex-col items-start text-lg font-semibold text-gray-500 dark:text-gray-400 rounded-b-md overflow-hidden",
                 {
                   hidden: !isMenuOpen,
                 }
               )}
               variants={mobileMenuVariants}
+              initial="closed"
               animate={isMenuOpen ? "open" : "closed"}
             >
               {links.map((link) => (
