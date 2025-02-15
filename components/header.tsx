@@ -48,7 +48,7 @@ const Header = memo(function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[0.2rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[1.8rem] sm:h-[initial] sm:py-0 w-full">
+      <nav className="flex fixed top-[0.2rem] left-1/2 h-14 -translate-x-1/2 py-2 sm:top-[1.8rem] sm:h-[initial] sm:py-0">
         {isMobile ? (
           // Мобильная версия
           <div className="flex items-center justify-between w-full px-4">
@@ -99,47 +99,49 @@ const Header = memo(function Header() {
           </div>
         ) : (
           // Десктопная версия
-          <ul className="flex w-[24rem] flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-semibold text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-            {links.map((link) => (
-              <motion.li
-                className="h-3/4 flex items-center justify-center relative"
-                key={link.hash}
-                initial={{ y: -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Link
-                  className={clsx(
-                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-100 whitespace-nowrap",
-                    {
-                      "text-gray-950 dark:text-gray-100":
-                        activeSection === link.name,
-                    }
-                  )}
-                  href={link.hash}
-                  aria-current={activeSection === link.name ? "page" : undefined}
-                  onClick={() => {
-                    setActiveSection(link.name);
-                    setTimeOfLastClick(Date.now());
-                  }}
+          <div className="w-full flex justify-center">
+            <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-semibold text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+              {links.map((link) => (
+                <motion.li
+                  className="h-3/4 flex items-center justify-center relative"
+                  key={link.hash}
+                  initial={{ y: -50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  {link.name}
+                  <Link
+                    className={clsx(
+                      "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-100 whitespace-nowrap",
+                      {
+                        "text-gray-950 dark:text-gray-100":
+                          activeSection === link.name,
+                      }
+                    )}
+                    href={link.hash}
+                    aria-current={activeSection === link.name ? "page" : undefined}
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now());
+                    }}
+                  >
+                    {link.name}
 
-                  {link.name === activeSection && (
-                    <motion.span
-                      className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                      layoutId="activeSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    ></motion.span>
-                  )}
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
+                    {link.name === activeSection && (
+                      <motion.span
+                        className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      ></motion.span>
+                    )}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </div>
         )}
       </nav>
     </header>
