@@ -166,34 +166,26 @@ export default function Contact() {
         </div>
       </div>
       <div className="w-full mt-8 flex flex-col sm:flex-row gap-4">
-        <div className="w-full sm:w-1/2">
-          <h2 className="text-lg font-semibold mb-4">🌍 Мы на карте (ТЦ "Крым")</h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.592114486343!2d49.44545337729958!3d53.51152857241178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687f4809a3a191%3A0x4e22b48f05e8d462!2z0YPQuy4g0JzQuNGA0LAsIDEzM0El2K_Ydg!5e0!3m2!1sru!2sru!4v1706794404801!5m2!1sru!2sru"
-            width="100%"
-            height="300"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div className="w-full sm:w-1/2">
+        <div className="w-full sm:w-1/3">
           <h2 className="text-lg font-semibold mb-4">🚌 Как добраться на общественном транспорте:</h2>
           <ul className="list-disc list-inside text-gray-700 dark:text-white/80">
-            <li>
-              **Автобусы:** Маршруты № 2, 12, 13, 21 (остановка "ТЦ Крым" или "Улица Мира").
-            </li>
-            <li>
-              **Маршрутки:**  Маршруты № 91, 93, 96, 126 (остановка "ТЦ Крым" или "Улица Мира").
-            </li>
-            <li>
-              **Троллейбусы:** Маршрут № 3 (остановка "Улица Мира").
-            </li>
+            <li>Автобусы: Маршруты № 2, 12, 13, 21 (остановка "ТЦ Крым" или "Улица Мира").</li>
+            <li>Маршрутки: Маршруты № 91, 93, 96, 126 (остановка "ТЦ Крым" или "Улица Мира").</li>
+            <li>Троллейбусы: Маршрут № 3 (остановка "Улица Мира").</li>
           </ul>
           <p className="text-sm text-gray-500 mt-2">
             *Пожалуйста, уточняйте актуальное расписание и маршруты на сайтах транспортных компаний Тольятти.*
           </p>
+        </div>
+        <div className="w-full sm:w-2/3">
+          <h2 className="text-lg font-semibold mb-4">🌍 Мы на карте (ТЦ "Крым")</h2>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2ec43031182e789e1985a1757b5389f97df8a5c340239a9b0f16734b2087b8b&source=constructor"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+          ></iframe>
         </div>
       </div>
     </motion.section>
