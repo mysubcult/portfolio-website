@@ -120,7 +120,7 @@ export default function Contact() {
             </button>
             <h3 className="text-base font-semibold mb-2">📍 Адрес:</h3>
             <p className="text-gray-700 dark:text-white/80">
-              ул. Мира, 113, Тольятти, Самарская обл., 445054
+              ул. Мира, 133А, Тольятти, Самарская обл., 445045
             </p>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function Contact() {
       <div className="w-full mt-8">
         <h2 className="text-lg font-semibold mb-4">🌍 Мы на карте</h2>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2372.625496765013!2d49.44457003041072!3d53.51088505855271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687f4866fcfd7d%3A0x85f659284c3131e3!2z0YPQuy4g0JzQuNGA0LAsIDExMywg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTA1NA!5e0!3m2!1sru!2sru!4v1734877094477!5m2!1sru!2sru"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.592114486343!2d49.44545337729958!3d53.51152857241178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687f4809a3a191%3A0x4e22b48f05e8d462!2z0YPQuy4g0JzQuNGA0LAsIDEzM0El2K_Ydg!5e0!3m2!1sru!2sru!4v1706794404801!5m2!1sru!2sru"
           width="100%"
           height="300"
           style={{ border: 0 }}
